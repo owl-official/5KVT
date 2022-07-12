@@ -1,0 +1,68 @@
+.slider {
+    &__item {
+        cursor: pointer;
+        display: block;
+        height: 500px;
+        padding-top: 5px;
+        background-repeat: no-repeat;
+    }
+
+    &__box {
+        position: absolute;
+        display: flex;
+        top: 360px;
+        margin-left: 105px;
+    }
+
+    &__about {
+        width: 185px;
+        height: 55px;
+        background: #1074eb;
+        border-radius: 3px;
+        border: none;
+        color: white;
+    }
+}
+
+.slick {
+    &__prev,
+    &__next {
+        position: relative;
+        cursor: pointer;
+        width: 55px;
+        height: 55px;
+        background-color: #1074eb;
+        color: #1074eb;
+        border-radius: 3px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+
+    &__prev {
+        margin-left: 21px;
+        &::before {
+            display: block;
+            content: "";
+            width: 6.25px;
+            height: 12.5px;
+            background-image: url(../images/arrow.png);
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__next {
+        margin-left: 10px;
+        &::before {
+            display: block;
+            content: "";
+            width: 6.25px;
+            height: 12.5px;
+            background-image: url(../images/arrow.png);
+            background-repeat: no-repeat;
+            transform: rotate(180deg);
+        }
+    }
+}
