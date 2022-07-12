@@ -290,41 +290,143 @@
 
 .product {
     padding-top: 100px;
-    padding-bottom: 70px; 
+    padding-bottom: 100px;
 
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: flex-end;
+        gap: 30px;
+    }
 
-  &__header{
+    &__header {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 43px;
+        color: #383838;
+        padding-bottom: 70px;
+    }
+    &_slider {
+    }
 
+    &__wrap {
+        position: relative;
+    }
+
+    &__sale {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 67px;
+        height: 24px;
+        background: #ff9900;
+        border-radius: 0px 3px 3px 0px;
+        text-align: center;
+        top: 17px;
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+
+    .producut__sale--red {
+        background: #e92626;
+    }
+
+    &__body {
+        width: 265px;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 3px;
+    }
+
+    &__body {
+        position: relative;
+
+        &::after {
+            cursor: pointer;
+            position: absolute;
+            display: block;
+            content: "";
+            background-image: url(../images/heart-line.svg);
+            background-repeat: no-repeat;
+            top: -250px;
+            right: 17px;
+            width: 23px;
+            height: 23px;
+        }
+    }
+
+    &__title {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #9c9c9c;
+        padding-top: 20px;
+        padding-bottom: 7px;
+    }
+    &__description {
+        display: block;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #383838;
+        padding-bottom: 32px;
+    }
+    &__price {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #383838;
+    }
+
+    &__icon--blue {
+        fill: #1074eb;
+    }
+
+    &_block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        position: relative;
+        cursor: pointer;
+        width: 263px;
+        max-width: 100%;
+        height: 55px;
+        margin-top: 30px;
+        border: none;
+        background: #1074eb;
+        border-radius: 3px;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/shopping_cart.svg);
+            background-repeat: no-repeat;
+            top: 18px;
+            left: 57px;
+        }
+    }
 }
-  &_slider {
-
-}
-  &__body {
-width: 263px;
-height: 263px;  
-max-width: 100%;  
-padding: 30px 30px;
-
-max-height: 100%;
-background: #F7F7F7;
-border-radius: 3px;
-}
-  &__wrap {
-
-}
-  &__title {
-
-}
-  &__description {
-display: block;
-}
-  &__price {
-
-} 
-
-&_block { 
-    display: flex; 
-    justify-content: space-between;
-}
-}
-
