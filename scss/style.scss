@@ -3,3 +3,163 @@
 @import "reset";
 @import "libs";
 @import "global";
+
+.header {
+    &__top {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background: #f7f7f7;
+        width: 100%;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__link {
+        padding-right: 25px;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #383838;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-link {
+        padding-left: 40px;
+        padding-right: 40px;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #9c9c9c;
+    }
+
+    &__item {
+        position: relative;
+        list-style: none;
+    }
+
+    .header-link::before {
+        position: absolute;
+        content: "";
+        display: block;
+        background-image: url(../images/Ellipse.png);
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 5px;
+        right: 0;
+        border-radius: 7px;
+        top: 10px;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        margin-right: 25px;
+    }
+
+    &__images {
+        display: flex;
+    }
+
+    &__bottom {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__form {
+        position: relative;
+    }
+
+    &__input {
+        cursor: pointer;
+        padding-left: 10px;
+        padding-right: 74px;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #9c9c9c;
+        border-radius: 3px;
+        border: 1px solid #c9c9c9;
+        outline: none;
+        width: 292px;
+        height: 37px;
+        max-width: 100%;
+        margin-left: 15px;
+    }
+
+    &__button {
+        cursor: pointer;
+        position: absolute;
+        content: "";
+        display: block;
+        right: 5px;
+        top: 5px;
+        width: 66px;
+        height: 27px;
+        border: none;
+        background: #1074eb;
+        border-radius: 3px;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+    }
+
+    &-btn {
+        cursor: pointer;
+        width: 165px;
+        max-width: 100%;
+        height: 37px;
+        background: #ff9900;
+        border-radius: 3px;
+        border: none;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        margin-left: -10px;
+    }
+
+    &__tel {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+        color: #383838;
+    }
+
+    &__user {
+        margin-right: 20px;
+    }
+}
+
+.social__icon {
+    margin-right: 10px;
+}
