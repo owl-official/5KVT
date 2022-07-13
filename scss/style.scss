@@ -21,7 +21,7 @@
 
     &__bottom {
         padding-top: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 22px;
     }
 
     &__list {
@@ -29,12 +29,14 @@
     }
 
     &__link {
-        font-family: "Lato";
-        font-style: normal;
-        font-weight: 400;
         font-size: 16px;
         line-height: 19px;
         color: #383838;
+        margin-right: 30px;
+
+        &:last-child {
+            margin: 0;
+        }
     }
 
     .header__link:hover {
@@ -48,16 +50,20 @@
 
     &__icon {
         margin-right: 25px;
+
+        &:hover {
+            svg path {
+                fill: $primary;
+            }
+        }
+
+        &:last-child {
+            margin: 0;
+        }
     }
 
     &__images {
         display: flex;
-    }
-
-    &-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
     }
 
     &__search {
@@ -68,32 +74,33 @@
         cursor: pointer;
         width: 165px;
         max-width: 100%;
-        height: 37px;
+        height: 40px;
         background: #ff9900;
         border-radius: 3px;
         border: none;
-        font-family: "Lato";
-        font-style: normal;
         font-weight: 400;
         font-size: 16px;
-        line-height: 19px;
+        line-height: 18px;
         color: #ffffff;
-        margin-left: -10px;
     }
 
     &__tel {
-        font-family: "Lato";
-        font-style: normal;
-        font-weight: 500;
         font-size: 25px;
         line-height: 30px;
         color: #383838;
     }
 
     &__user {
-        margin-right: 20px;
+        cursor: pointer;
+        height: 40px;
+        width: 37px;
+        background-image: url("../images/user.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
     }
 }
+
 .motto {
     &__item {
         position: relative;
@@ -124,17 +131,15 @@
     &__input {
         padding-left: 10px;
         padding-right: 74px;
-        font-family: "Lato";
-        font-style: normal;
         font-weight: 400;
         font-size: 16px;
-        line-height: 19px;
+        line-height: 18px;
         color: #9c9c9c;
         border-radius: 3px;
         border: 1px solid #c9c9c9;
         outline: none;
         width: 292px;
-        height: 37px;
+        height: 40px;
         max-width: 100%;
         margin-left: 15px;
     }
@@ -147,15 +152,15 @@
         right: 5px;
         top: 5px;
         width: 66px;
-        height: 27px;
+        height: 30px;
         border: none;
         background: #1074eb;
         border-radius: 3px;
         font-family: "Lato";
         font-style: normal;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 16px;
-        line-height: 19px;
+        line-height: 18px;
         color: #ffffff;
     }
 }
@@ -166,46 +171,33 @@
 }
 
 .navigation {
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-bottom: 9px;
 
     &__box {
         display: flex;
     }
 
-    &__btn {
+    &__menu {
         cursor: pointer;
         display: flex;
         align-items: center;
         background: #1074eb;
         border-radius: 3px;
         border: none;
-        height: 55px;
+        height: 60px;
         width: 136px;
         justify-content: space-around;
     }
 
     &__item {
-        list-style: none;
-    }
-
-    &_link {
-        font-family: "Lato";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-        color: #ffffff;
+        padding-left: 23px;
     }
 
     &__link {
-        font-family: "Lato";
         font-style: normal;
-        font-weight: 400;
         font-size: 16px;
         line-height: 19px;
         color: $black;
-        padding-left: 18px;
         white-space: nowrap;
         transition: all 0.2s;
     }
@@ -214,9 +206,9 @@
         color: $primary;
     }
 
-    nav {
+    &__block {
         background: #f7f7f7;
-        width: 98%;
+        width: 100%;
     }
 
     &__list {
@@ -225,18 +217,26 @@
     }
 }
 
-.product {
+.menu {
+    &__title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        color: #ffffff;
+    }
+}
+
+.carousel {
     padding-top: 100px;
     padding-bottom: 100px;
 
-    &__inner {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        align-items: flex-end;
-        gap: 30px;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    &__header {
+    &__title {
         font-family: "Lato";
         font-style: normal;
         font-weight: 400;
@@ -245,11 +245,36 @@
         color: #383838;
         padding-bottom: 70px;
     }
-    &_slider {
-    }
 
+    &__product {
+        margin: 0 15px;
+    }
+}
+
+.product {
     &__wrap {
         position: relative;
+    }
+
+    &__body {
+        position: relative;
+        width: 265px;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 3px;
+
+        &::after {
+            cursor: pointer;
+            position: absolute;
+            display: block;
+            content: "";
+            background-image: url(../images/heart-line.svg);
+            background-repeat: no-repeat;
+            top: -250px;
+            right: 17px;
+            width: 23px;
+            height: 23px;
+        }
     }
 
     &__sale {
@@ -269,34 +294,14 @@
         line-height: 19px;
         color: #ffffff;
         text-transform: uppercase;
-    }
 
-    .producut__sale--red {
-        background: #e92626;
-    }
-
-    &__body {
-        width: 265px;
-        max-width: 100%;
-        max-height: 100%;
-        border-radius: 3px;
-    }
-
-    &__body {
-        position: relative;
-
-        &::after {
-            cursor: pointer;
-            position: absolute;
-            display: block;
-            content: "";
-            background-image: url(../images/heart-line.svg);
-            background-repeat: no-repeat;
-            top: -250px;
-            right: 17px;
-            width: 23px;
-            height: 23px;
+        &--red {
+            background: #e92626 !important;
         }
+    }
+
+    &__icon {
+        fill: $primary;
     }
 
     &__title {
@@ -328,11 +333,7 @@
         color: #383838;
     }
 
-    &__icon--blue {
-        fill: #1074eb;
-    }
-
-    &_block {
+    &__block {
         display: flex;
         justify-content: space-between;
     }
@@ -345,7 +346,7 @@
         height: 55px;
         margin-top: 30px;
         border: none;
-        background: #1074eb;
+        background: $primary;
         border-radius: 3px;
         font-family: "Lato";
         font-style: normal;
