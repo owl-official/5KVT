@@ -259,6 +259,7 @@
     &__body {
         position: relative;
         width: 265px;
+        height: 100%;
         max-width: 100%;
         max-height: 100%;
         border-radius: 3px;
@@ -333,6 +334,16 @@
         color: #383838;
     }
 
+    &__old__price {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        text-decoration-line: line-through;
+        color: #c9c9c9;
+    }
+
     &__block {
         display: flex;
         justify-content: space-between;
@@ -366,5 +377,261 @@
             top: 18px;
             left: 57px;
         }
+    }
+}
+
+.recomend {
+    &__wrap {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            background-image: url(../images/recommend.png);
+            background-repeat: no-repeat;
+            width: 266px;
+            height: 266px;
+            top: 14px;
+            left: 14px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            background-image: url(../images/recommend-2.png);
+            background-repeat: no-repeat;
+            width: 266px;
+            height: 266px;
+            top: 14px;
+            right: 126px;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        cursor: pointer;
+        width: 262px;
+        height: 55px;
+        background: #ffffff;
+        border: none;
+        border-radius: 3px;
+        right: 480px;
+        bottom: 40px;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #1074eb;
+    }
+}
+
+.advantage {
+    padding-bottom: 100px;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__header {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 43px;
+        padding-bottom: 70px;
+        color: #383838;
+    }
+
+    &__product {
+        width: 263px;
+        max-width: 100%;
+        height: 100%;
+        min-height: 250px;
+        padding: 35px 17px;
+        background: #f7f7f7;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__img {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        display: block;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: $black;
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        display: block;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #9c9c9c;
+    }
+}
+
+.footer {
+    padding-top: 53px;
+    padding-bottom: 50px;
+    background-color: $black;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: block;
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+
+    &__tel {
+        display: block;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        display: block;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+    &__location {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #9c9c9c;
+    }
+
+    &__title {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    &__header {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+        margin-top: 26px;
+        margin-bottom: 26px;
+    }
+
+    &__link {
+        display: block;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #9c9c9c;
+        margin-top: 13px;
+        transition: all 0.2s;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &__text {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #9c9c9c;
+        transition: all 0.2s;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &__slogan {
+        display: flex;
+    }
+    &__img {
+        margin-right: 10px;
+        margin-bottom: 33px;
+    }
+
+    &--button {
+        display: block;
+        position: relative;
+        font-family: "Lato";
+        right: 0;
+        top: 0;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        background: $primary;
+        margin-bottom: 30px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/user-2.png);
+            background-repeat: no-repeat;
+            left: 37px;
+            top: 18px;
+        }
+    }
+
+    &__image {
+        margin-right: 10px;
+    }
+
+    &__rule {
+        margin-top: 53px;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #9c9c9c;
     }
 }
