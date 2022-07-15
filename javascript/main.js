@@ -3,8 +3,8 @@ $(document).ready(function () {
         arrows: true,
         infinite: true,
         slidesToShow: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
         prevArrow: $(".slide-arrow-prev"),
         nextArrow: $(".slide-arrow-next"),
     });
@@ -29,11 +29,6 @@ $(document).ready(function () {
         responsive: [
             {
                 breakpoint: 4000,
-                settings: "unslick",
-            },
-
-            {
-                breakpoint: 601,
                 settings: "unslick",
             },
 

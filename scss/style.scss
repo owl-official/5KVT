@@ -63,7 +63,7 @@
     }
 
     &__icon {
-        margin-right: 25px;
+        margin-left: 25px;
 
         &:hover {
             svg path {
@@ -74,6 +74,10 @@
         &:last-child {
             margin: 0;
         }
+    }
+
+    &__removed {
+        display: none;
     }
 
     &__images {
@@ -404,9 +408,14 @@
 }
 
 .recommendations {
+    background-image: url(../images/background.svg);
+    background-repeat: no-repeat;
+    max-width: 100%;
+    background-position: center;
+    height: 300px;
+    overflow: hidden;
     &__wrap {
         position: relative;
-
         &::after {
             position: absolute;
             content: "";
@@ -434,20 +443,16 @@
 
     &__info {
         display: block;
-        position: absolute;
-        content: "";
-        right: 420px;
-        top: 50px;
         font-weight: 400;
         font-size: 24px;
         line-height: 29px;
         color: #ffffff;
+        margin-bottom: 23px;
 
         &::after {
             display: block;
             position: absolute;
             content: "";
-            left: 2px;
             width: 100px;
             height: 1px;
             margin-top: 23px;
@@ -456,21 +461,25 @@
     }
 
     &__button {
-        position: absolute;
         cursor: pointer;
         width: 262px;
         height: 55px;
         background: #ffffff;
         border: none;
         border-radius: 3px;
-        right: 480px;
-        bottom: 40px;
-        font-family: "Lato";
-        font-style: normal;
         font-weight: 600;
         font-size: 16px;
         line-height: 19px;
         color: #1074eb;
+        margin-top: 53px;
+        margin-right: 65px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0 0 0;
     }
 }
 

@@ -1,11 +1,27 @@
 .slider {
     &__item {
+        position: relative;
         cursor: pointer;
         display: block;
         height: 500px;
         padding-top: 5px;
         background-repeat: no-repeat;
         border-radius: 3px;
+    }
+
+    &__title {
+        width: 456px;
+        font-weight: 900;
+        font-size: 64px;
+        line-height: 77px;
+        color: #ffffff;
+    }
+
+    &__description {
+        width: 482px;
+        font-size: 36px;
+        line-height: 43px;
+        color: #9c9c9c;
     }
 
     &__box {
@@ -23,6 +39,7 @@
         border: none;
         color: white;
     }
+
 }
 
 .slick {
