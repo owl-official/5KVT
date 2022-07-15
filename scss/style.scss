@@ -4,12 +4,25 @@
 @import "libs";
 @import "global";
 @import "slider";
+@import "media";
 
 .header {
     &__box {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &--logo {
+        display: none;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
     &__top {
@@ -17,6 +30,7 @@
         padding-bottom: 15px;
         background: #f7f7f7;
         width: 100%;
+        overflow: hidden;
     }
 
     &__bottom {
@@ -88,6 +102,14 @@
         font-size: 25px;
         line-height: 30px;
         color: #383838;
+    }
+
+    &__email {
+        display: none;
+    }
+
+    &__phone {
+        display: none;
     }
 
     &__user {
@@ -214,6 +236,7 @@
     &__list {
         display: flex;
         align-items: center;
+        overflow: hidden;
     }
 }
 
@@ -254,6 +277,19 @@
 .product {
     &__wrap {
         position: relative;
+
+        &::before {
+            cursor: pointer;
+            position: absolute;
+            display: block;
+            content: "";
+            background-image: url(../images/heart-line.svg);
+            background-repeat: no-repeat;
+            top: 18px;
+            right: 15px;
+            width: 23px;
+            height: 23px;
+        }
     }
 
     &__body {
@@ -263,19 +299,6 @@
         max-width: 100%;
         max-height: 100%;
         border-radius: 3px;
-
-        &::after {
-            cursor: pointer;
-            position: absolute;
-            display: block;
-            content: "";
-            background-image: url(../images/heart-line.svg);
-            background-repeat: no-repeat;
-            top: -250px;
-            right: 17px;
-            width: 23px;
-            height: 23px;
-        }
     }
 
     &__sale {
@@ -380,7 +403,7 @@
     }
 }
 
-.recomend {
+.recommendations {
     &__wrap {
         position: relative;
 
@@ -409,6 +432,29 @@
         }
     }
 
+    &__info {
+        display: block;
+        position: absolute;
+        content: "";
+        right: 420px;
+        top: 50px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: #ffffff;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: "";
+            left: 2px;
+            width: 100px;
+            height: 1px;
+            margin-top: 23px;
+            background-color: white;
+        }
+    }
+
     &__button {
         position: absolute;
         cursor: pointer;
@@ -431,14 +477,12 @@
 .advantage {
     padding-bottom: 100px;
     &__box {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
     }
 
     &__header {
-        font-family: "Lato";
-        font-style: normal;
         font-weight: 400;
         font-size: 36px;
         line-height: 43px;
@@ -446,7 +490,7 @@
         color: #383838;
     }
 
-    &__product {
+    &__item {
         width: 263px;
         max-width: 100%;
         height: 100%;
@@ -456,7 +500,9 @@
         border-radius: 3px;
         overflow: hidden;
     }
+}
 
+.item {
     &__wrap {
         display: flex;
         justify-content: center;
@@ -497,6 +543,7 @@
     &__box {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__logo {
@@ -505,10 +552,16 @@
         margin-bottom: 25px;
     }
 
-    &__tel {
+    &__email {
         display: block;
-        font-family: "Lato";
-        font-style: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    &__time {
+        display: block;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
@@ -516,65 +569,58 @@
         margin-bottom: 20px;
     }
 
-    &__text {
+    &__tel {
         display: block;
-        font-family: "Lato";
-        font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
         color: #ffffff;
         margin-bottom: 20px;
     }
+
     &__location {
-        font-family: "Lato";
-        font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
         color: #9c9c9c;
+        width: 245px;
     }
 
     &__title {
-        font-family: "Lato";
-        font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
         color: #ffffff;
         margin-bottom: 20px;
+        white-space: nowrap;
     }
 
     &__header {
-        font-family: "Lato";
-        font-style: normal;
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
         color: #ffffff;
         margin-top: 26px;
         margin-bottom: 26px;
+        white-space: nowrap;
     }
 
     &__link {
         display: block;
-        font-family: "Lato";
-        font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
         color: #9c9c9c;
         margin-top: 13px;
         transition: all 0.2s;
+        white-space: nowrap;
 
         &:hover {
             color: white;
         }
     }
 
-    &__text {
-        font-family: "Lato";
-        font-style: normal;
+    &__social__link {
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
@@ -586,7 +632,7 @@
         }
     }
 
-    &__slogan {
+    &__support__us {
         display: flex;
     }
     &__img {
@@ -594,18 +640,20 @@
         margin-bottom: 33px;
     }
 
-    &--button {
+    &__button {
+        cursor: pointer;
+        width: 262px;
+        max-width: 100%;
+        height: 55px;
         display: block;
         position: relative;
-        font-family: "Lato";
         right: 0;
         top: 0;
-        font-style: normal;
-        font-weight: 600;
         font-size: 16px;
         line-height: 19px;
         color: #ffffff;
         background: $primary;
+        border: none;
         margin-bottom: 30px;
 
         &::after {
@@ -625,13 +673,15 @@
         margin-right: 10px;
     }
 
-    &__rule {
+    &__copyright {
         margin-top: 53px;
-        font-family: "Lato";
-        font-style: normal;
         font-weight: 500;
         font-size: 12px;
         line-height: 14px;
         color: #9c9c9c;
     }
+}
+
+.burger__menu {
+    display: none;
 }

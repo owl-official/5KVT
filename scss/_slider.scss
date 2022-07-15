@@ -114,3 +114,15 @@
         }
     }
 }
+
+// Advantage slider
+.slick-dots li.slick-active button:before {
+    color: #1074eb;
+    font-size: 14px;
+}
+
+.slick-dots li button:before {
+    color: #1074eb;
+    opacity: 0.3;
+    font-size: 14px;
+}
