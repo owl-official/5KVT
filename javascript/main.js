@@ -16,22 +16,32 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 930,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                },
+            },
+            {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
     });
 });
 
 $(document).ready(function () {
     $(".advantage__box").slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         arrows: false,
+        adaptiveHeight: false,
         responsive: [
-            {
-                breakpoint: 4000,
-                settings: "unslick",
-            },
-
             {
                 breakpoint: 600,
                 settings: {

@@ -3,7 +3,7 @@
         position: relative;
         cursor: pointer;
         display: block;
-        height: 500px;
+        height: 500px !important;
         padding-top: 5px;
         background-repeat: no-repeat;
         border-radius: 3px;
@@ -39,7 +39,6 @@
         border: none;
         color: white;
     }
-
 }
 
 .slick {
@@ -132,14 +131,36 @@
     }
 }
 
-// Advantage slider
-.slick-dots li.slick-active button:before {
-    color: #1074eb;
-    font-size: 14px;
+// Advantage
+.advantage {
+    .slick-slide {
+        margin: 0 15px;
+    }
+
+    .slick-list {
+        margin: 0 -15px;
+    }
 }
 
-.slick-dots li button:before {
-    color: #1074eb;
-    opacity: 0.3;
-    font-size: 14px;
+.slick-dots {
+    position: relative !important;
+
+    li.slick-active button:before {
+        color: #1074eb;
+        font-size: 14px;
+    }
+
+    li button:before {
+        color: #1074eb;
+        opacity: 0.3;
+        font-size: 14px;
+    }
+}
+
+.slick-track {
+    display: flex !important;
+}
+
+.slick-slide {
+    height: auto;
 }

@@ -66,10 +66,6 @@
             top: 30px !important;
             right: 25px !important;
         }
-
-        &__box {
-            justify-content: space-evenly !important;
-        }
     }
     .slick-prev,
     .slick-next {
@@ -129,6 +125,16 @@
 }
 
 @media (max-width: 922px) {
+    .header {
+        &__box {
+            justify-content: space-between !important;
+        }
+
+        &__motto {
+            display: none !important;
+        }
+    }
+
     .footer {
         padding: 0 15px;
 
@@ -162,10 +168,8 @@
 @media (max-width: 850px) {
     .header {
         &__links {
-            flex-basis: 100%;
             display: flex;
-            justify-content: center;
-            margin-top: 20px;
+            justify-content: flex-end;
         }
     }
 
@@ -320,7 +324,11 @@
             justify-content: unset;
         }
 
-        &--logo {
+        &__logo--top {
+            display: block;
+        }
+
+        &__menu--top {
             display: block;
         }
 
