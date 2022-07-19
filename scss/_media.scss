@@ -20,6 +20,10 @@
         &__item {
             padding-left: 20px !important;
         }
+
+        &__list {
+            display: none !important;
+        }
     }
 
     .form {
@@ -121,6 +125,10 @@
                 right: 0;
             }
         }
+    }
+
+    .catalog__filters {
+        display: none;
     }
 }
 
@@ -496,3 +504,5 @@
         }
     }
 }
+
+
