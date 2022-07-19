@@ -3,8 +3,8 @@ $(document).ready(function () {
         arrows: true,
         infinite: true,
         slidesToShow: 1,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
+        autoplay: true,
+        autoplaySpeed: 3000,
         prevArrow: $(".slide-arrow-prev"),
         nextArrow: $(".slide-arrow-next"),
     });
@@ -28,9 +28,9 @@ $(document).ready(function () {
                 breakpoint: 450,
                 settings: {
                     slidesToShow: 2,
-                }
-            }
-        ]
+                },
+            },
+        ],
     });
 });
 
@@ -52,5 +52,17 @@ $(document).ready(function () {
                 },
             },
         ],
+    });
+});
+
+$(document).ready(function () {
+    $(".reviews__slider").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,   
+        speed: 400,
+        arrows: true,
+        prevArrow: $(".slide_arrow_prev"),
+        nextArrow: $(".slide_arrow_next"),
     });
 });
