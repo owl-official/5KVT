@@ -57,9 +57,10 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $(".reviews__slider").slick({
+        adaptiveWidth: true,
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1,   
+        slidesToScroll: 1,
         speed: 400,
         arrows: true,
         prevArrow: $(".slide_arrow_prev"),

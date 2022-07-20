@@ -379,8 +379,8 @@
     &__button {
         position: relative;
         cursor: pointer;
-        width: 263px;
-        max-width: 100%;
+        width: 100%;
+        max-width: 263px;
         height: 55px;
         margin-top: 30px;
         border: none;
@@ -1404,7 +1404,6 @@
     }
 
     &__slider-description {
-        width: 495px;
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
@@ -1433,6 +1432,14 @@
         color: #383838;
         font-weight: 600;
         margin-left: 10px;
+    }
+
+    &__img {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        object-fit: cover;
+        flex: 0 0 70px;
     }
 }
 
@@ -1484,4 +1491,3 @@
     background: #e92626;
     margin-top: 30px;
 }
-
