@@ -1,7 +1,6 @@
 $(document).ready(function () {
     $(".slider__content").slick({
         arrows: true,
-        infinite: true,
         slidesToShow: 1,
         autoplay: true,
         autoplaySpeed: 3000,
@@ -59,7 +58,7 @@ $(document).ready(function () {
     $(".reviews__slider").slick({
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1,   
+        slidesToScroll: 1,
         speed: 400,
         arrows: true,
         prevArrow: $(".slide_arrow_prev"),
