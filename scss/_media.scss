@@ -1,3 +1,4 @@
+//  Large screen
 @media (max-width: 1180px) {
     .wrapper {
         max-width: 1000px;
@@ -131,7 +132,63 @@
         display: none;
     }
 }
+// Laptop M
+@media (max-width: 1024px) {
+    .description .description {
+        &__inner {
+            flex-wrap: wrap;
+        }
 
+        &__box {
+            width: 100%;
+        }
+    }
+
+    .reviews {
+        &__slider {
+            width: 100% !important;
+            margin-left: 0px !important;
+            margin-top: 16px;
+        }
+    }
+}
+
+@media (max-width: 995px) {
+    .cart .cart {
+        &__button {
+            min-width: 100%;
+        }
+
+        &__title-gray {
+            font-size: 30px;
+        }
+
+        &__title {
+            font-size: 30px;
+        }
+    }
+    .item {
+        &__price {
+            font-size: 24px !important;
+        }
+
+        &__old-price {
+            font-size: 24px !important;
+        }
+    }
+
+    .content {
+        &__bottom {
+            display: block !important;
+        }
+
+        &__block {
+            margin-top: 20px;
+        }
+    }
+}
+
+// Laptop
 @media (max-width: 922px) {
     .header {
         &__box {
@@ -155,20 +212,55 @@
             width: 30%;
         }
     }
+
+    .recommendations .recommendations {
+        &__inner {
+            padding: 50px 0 0 40px;
+        }
+
+        &__wrap {
+            &::after {
+                left: -29px;
+            }
+
+            &::before {
+                right: -45px;
+            }
+        }
+    }
+}
+@media (max-width: 890px) {
+    .cart .cart {
+        &__inner {
+            flex-wrap: wrap-reverse;
+        }
+
+        &__block {
+            width: 100%;
+            margin-left: 0px;
+        }
+    }
+
+    .feature {
+        &__box {
+            display: none;
+        }
+    }
+}
+
+// Tablet
+@media (max-width: 875px) {
+    .header {
+        &__links {
+            margin-top: 10px;
+        }
+    }
 }
 
 @media (max-width: 850px) and (min-width: 580px) {
     .advantage {
         &__item {
             min-width: 100% !important;
-        }
-    }
-}
-
-@media (max-width: 875px) {
-    .header {
-        &__links {
-            margin-top: 10px;
         }
     }
 }
@@ -189,96 +281,17 @@
     }
 }
 
-@media (max-width: 720px) {
-    .footer {
-        &__info {
-            flex-basis: 50%;
-        }
-    }
-}
+@media (max-width: 806px) {
+    .recommendations .recommendations {
+        &__wrap {
+            &::after {
+                left: -55px;
+                top: -45px;
+            }
 
-@media (max-width: 550px) {
-    .footer {
-        &__info {
-            flex-basis: 60%;
-            margin-top: 20px;
-        }
-
-        &__support {
-            margin-top: 20px;
-        }
-
-        &__box {
-            justify-content: unset !important;
-        }
-    }
-}
-
-@media (max-width: 550px) {
-    .footer {
-        &__info {
-            flex-basis: 60%;
-            margin-top: 20px;
-        }
-
-        &__support {
-            margin-top: 20px;
-        }
-
-        &__box {
-            justify-content: unset !important;
-        }
-    }
-}
-
-@media (max-width: 430px) {
-    .footer {
-        padding: 0 8px;
-        &__box {
-            justify-content: unset !important;
-        }
-
-        &__logo {
-            display: none !important;
-        }
-
-        &__info {
-            flex-basis: 60%;
-            margin-top: 20px;
-        }
-
-        &__email {
-            order: 1;
-        }
-
-        &__time {
-            font-size: 15px !important;
-            margin-right: 44px;
-        }
-
-        &__tel {
-            text-align: right;
-        }
-
-        &__support {
-            flex-basis: 100%;
-        }
-
-        &__button {
-            min-width: 100%;
-            overflow: hidden;
-        }
-
-        &__location {
-            width: 297px !important;
-        }
-
-        &__row {
-            display: flex;
-        }
-
-        &__support__us {
-            margin-top: 32px;
+            &::before {
+                right: -124px;
+            }
         }
     }
 }
@@ -411,52 +424,7 @@
     }
 }
 
-@media (max-width: 375px) {
-    .wrapper {
-        padding: 0 8px;
-    }
-
-    .header {
-        &__icon {
-            margin-right: 16px !important;
-            margin-left: 0 !important;
-        }
-    }
-}
-
-@media (max-width: 992px) {
-    .recommendations .recommendations {
-        &__inner {
-            padding: 50px 0 0 40px;
-        }
-
-        &__wrap {
-            &::after {
-                left: -29px;
-            }
-
-            &::before {
-                right: -45px;
-            }
-        }
-    }
-}
-
-@media (max-width: 806px) {
-    .recommendations .recommendations {
-        &__wrap {
-            &::after {
-                left: -55px;
-                top: -45px;
-            }
-
-            &::before {
-                right: -124px;
-            }
-        }
-    }
-}
-
+// Tablet
 @media (max-width: 752px) {
     .recommendations {
         background-size: 4990px auto;
@@ -483,6 +451,15 @@
     }
 }
 
+@media (max-width: 720px) {
+    .footer {
+        &__info {
+            flex-basis: 50%;
+        }
+    }
+}
+
+// Mobile L
 @media (max-width: 600px) {
     .recommendations {
         background-size: 4990px auto;
@@ -505,4 +482,86 @@
     }
 }
 
+// Mobile L
+@media (max-width: 550px) {
+    .footer {
+        &__info {
+            flex-basis: 60%;
+            margin-top: 20px;
+        }
 
+        &__support {
+            margin-top: 20px;
+        }
+
+        &__box {
+            justify-content: unset !important;
+        }
+    }
+}
+
+// Mobile S
+@media (max-width: 430px) {
+    .footer {
+        padding: 0 8px;
+        &__box {
+            justify-content: unset !important;
+        }
+
+        &__logo {
+            display: none !important;
+        }
+
+        &__info {
+            flex-basis: 60%;
+            margin-top: 20px;
+        }
+
+        &__email {
+            order: 1;
+        }
+
+        &__time {
+            font-size: 15px !important;
+            margin-right: 44px;
+        }
+
+        &__tel {
+            text-align: right;
+        }
+
+        &__support {
+            flex-basis: 100%;
+        }
+
+        &__button {
+            min-width: 100%;
+            overflow: hidden;
+        }
+
+        &__location {
+            width: 297px !important;
+        }
+
+        &__row {
+            display: flex;
+        }
+
+        &__support__us {
+            margin-top: 32px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .wrapper {
+        padding: 0 8px;
+    }
+
+    .header {
+        &__icon {
+            margin-right: 16px !important;
+            margin-left: 0 !important;
+        }
+    }
+}
