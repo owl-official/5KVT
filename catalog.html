@@ -215,14 +215,18 @@
             </div>
         </div>
     </section>
+    <div class="path">
+        <div class="wrapper">
+            <div class="path__block">
+                <a class="path__return" href="../index.html">Главная</a>
+                <img class="arrow__left" src="images/arrow-left.png" alt="">
+                <span class="path__title">Каталог товаров</span>
+            </div>
+        </div>
+    </div>
     <section class="catalog">
         <div class="wrapper">
-            <div class="catalog__block">
-                <a class="catalog__return" href="../index.html">Главная</a>
-                <img class="arrow__left" src="images/arrow-left.png" alt="">
-                <span class="catalog__sup-title">Каталог товаров</span>
-            </div>
-            <div class="catalog__middle">
+            <div class="catalog__top-info">
                 <h1 class="catalog__title">Каталог товаров</h1>
                 <div class="sort__block">
                     <span class="sort__title">Сортировать:</span>
@@ -230,11 +234,13 @@
                     <span class="sort__title">Показывать:</span>
                     <a class="sort__number" href="#">по 9</a>
                 </div>
+            </div>
+            <div class="btn__wrap">
                 <button class="button__more" type="button">
                     <img class="more__img" src="images/more-menu.svg" alt="">
                 </button>
             </div>
-            <div class="catalog__center">
+            <div class="catalog__main">
                 <div class="catalog__filters">
                     <div class="filter__categories">
                         <h3 class="filter__title">Категория</h3>
@@ -259,8 +265,8 @@
                     <div class="filter__price">
                         <h3 class="filter__title">Цена</h3>
                         <div class="filter__block">
-                            <input class="filter__input" value="от" type="search">
-                            <input class="filter__input" value="до" type="search">
+                            <input class="filter__input" placeholder="от" type="text">
+                            <input class="filter__input" placeholder="до" type="text">
                         </div>
                     </div>
                     <div class="filter__brend">
@@ -350,6 +356,7 @@
                                     </svg>
                                 </div>
                                 <button class="product__button" type="submit">В корзину</button>
+
                             </div>
                         </div>
                         <div class="catalog__item">
@@ -563,7 +570,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="another__pages">
+                    <div class="cart__pages">
                         <button class="page__button" href="#">
                             <img class="arrow" src="images/arrow.png" alt="">
                         </button>

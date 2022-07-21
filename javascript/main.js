@@ -55,8 +55,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".reviews__slider").slick({
-        adaptiveWidth: true,
+    $(".reviews__slider").slick({ 
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,

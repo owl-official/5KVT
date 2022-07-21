@@ -298,6 +298,10 @@
         }
     }
 
+    &__chart {
+        display: none;
+    }
+
     &__body {
         position: relative;
         width: 100%;
@@ -341,16 +345,12 @@
         padding-top: 20px;
         padding-bottom: 7px;
     }
+
     &__description {
         display: block;
-        font-family: "Lato";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
-        color: #383838;
-        padding-bottom: 32px;
+        margin-bottom: 32px;
     }
+
     &__price {
         font-family: "Lato";
         font-style: normal;
@@ -687,6 +687,29 @@
     display: none;
 }
 
+.path {
+    &__block {
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__return {
+        color: #9c9c9c;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+        line-height: 19px;
+        color: #383838;
+        white-space: nowrap;
+    }
+}
+
 .catalog {
     margin-bottom: 50px;
 
@@ -717,23 +740,7 @@
         gap: 30px;
     }
 
-    &__return {
-        font-size: 16px;
-        line-height: 19px;
-        color: #9c9c9c;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    &__sup-title {
-        font-size: 16px;
-        line-height: 19px;
-        color: #383838;
-    }
-
-    &__middle {
+    &__top-info {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -775,7 +782,7 @@
         }
     }
 
-    &__center {
+    &__main {
         display: flex;
     }
 
@@ -848,6 +855,23 @@
             margin-right: 11px;
             border: 1px solid #f7f7f7;
             border-radius: 3px;
+        }
+
+        &__rating {
+            position: relative;
+            margin-top: 25px;
+
+            &::after {
+                position: absolute;
+                content: "";
+                display: block;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 1px;
+                bottom: -12px;
+                background-color: #c9c9c9;
+                border-radius: 1px;
+            }
         }
 
         &__price {
@@ -1011,7 +1035,7 @@
     }
 }
 
-.another {
+.cart {
     &__pages {
         display: flex;
         align-items: center;
@@ -1103,6 +1127,27 @@
             color: #9c9c9c;
         }
     }
+
+    &__features {
+        max-width: 100%;
+        width: 1140px;
+        height: 382px;
+        background: #f7f7f7;
+        border-radius: 3px;
+        padding: 30px 30px 30px 30px;
+        margin-bottom: 30px;
+    }
+
+    &__description {
+        display: block;
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #383838;
+        padding-bottom: 32px;
+    }
 }
 
 .item {
@@ -1115,6 +1160,7 @@
 
     &__sup-title {
         color: #9c9c9c;
+        white-space: nowrap;
 
         &:last-child {
             color: #383838;
@@ -1271,16 +1317,6 @@
     }
 }
 
-.features {
-    max-width: 100%;
-    width: 1140px;
-    height: 382px;
-    background: #f7f7f7;
-    border-radius: 3px;
-    padding: 30px 30px 30px 30px;
-    margin-bottom: 30px;
-}
-
 .feature {
     &__title {
         position: relative;
@@ -1327,6 +1363,7 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+        margin-top: 30px;
     }
 }
 
@@ -1344,6 +1381,7 @@
         background: #f7f7f7;
         border-radius: 3px;
         padding: 30px 30px 30px 30px;
+        overflow: hidden;
     }
 
     &__title {
@@ -1435,6 +1473,7 @@
         color: #383838;
         font-weight: 600;
         margin-left: 10px;
+        white-space: nowrap;
     }
 
     &__img {

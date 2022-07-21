@@ -215,15 +215,19 @@
             </div>
         </div>
     </section>
-    <section class="cart">
+    <div class="path">
         <div class="wrapper">
-            <div class="item__box">
-                <a class="return__link" href="../index.html">Главная</a>
+            <div class="path__block">
+                <a class="path__return" href="../index.html">Главная</a>
                 <img class="arrow__left" src="images/arrow-left.png" alt="">
-                <a class="item__sup-title" href="../catalog.html">Каталог товаров</a>
+                <span class="path__title">Каталог товаров</span>
                 <img class="arrow__left" src="images/arrow-left.png" alt="">
                 <a class="item__sup-title" href="">Карточка товара</a>
             </div>
+        </div>
+    </div>
+    <section class="cart">
+        <div class="wrapper">
             <div class="cart__inner">
                 <div class="cart__product-block">
                     <div class="cart__wrap">
@@ -249,7 +253,9 @@
                             <img class="star" src="../images/star-gray.png" alt="">
                             <a class="comments__link" href="#">Отзывы (0)</a>
                         </div>
-                        <img src="../images/share-img.svg" alt="">
+                        <div class="img__wrap">
+                            <img class="share__img" src="../images/share-img.svg" alt="">
+                        </div>
                     </div>
                     <div class="patterns">
                         <span class="pattern__title">Артикул:<span class="pattern__colored">1129973</span></span>
@@ -280,12 +286,12 @@
                     </div>
                 </div>
             </div>
-            <div class="features">
+            <div class="cart__features">
                 <h2 class="feature__title">Характеристики</h2>
                 <div class="features__box">
                     <div class="feature__inner">
                         <div class="feature__block">
-                            <div class="feature__char">
+                            <div class="feature__content">
                                 <span class="feature__item">Характеристика</span>
                                 <span class="feature__item">Характеристика</span>
                                 <span class="feature__item">Характеристика</span>
@@ -293,7 +299,7 @@
                                 <span class="feature__item">Характеристика</span>
                                 <span class="feature__item">Характеристика</span>
                             </div>
-                            <div class="feature__tt">
+                            <div class="feature__content">
                                 <span class="feature__description">Значение</span>
                                 <span class="feature__description">Значение</span>
                                 <span class="feature__description">Значение</span>
@@ -303,7 +309,7 @@
                             </div>
                         </div>
                         <div class="feature__block">
-                            <div class="feature__char">
+                            <div class="feature__wrap">
                                 <span class="feature__item">Характеристика</span>
                                 <span class="feature__item">Характеристика</span>
                                 <span class="feature__item">Характеристика</span>
@@ -311,7 +317,7 @@
                                 <span class="feature__item">Характеристика</span>
                                 <span class="feature__item">Характеристика</span>
                             </div>
-                            <div class="feature__tt">
+                            <div class="feature__wrap">
                                 <span class="feature__description">Значение</span>
                                 <span class="feature__description">Значение</span>
                                 <span class="feature__description">Значение</span>
@@ -324,7 +330,7 @@
                     </div>
                 </div>
             </div>
-            <div class="description">
+            <div class="cart__description">
                 <div class="description__inner">
                     <div class="description__box">
                         <h2 class="description__title">Описание</h2>
@@ -357,6 +363,7 @@
                                     <h2 class="man__name">Иван Абрамов</h2>
                                 </div>
                                 <div class="stars">
+                                    <!-- <span class="comments__number">1</span> -->
                                     <img class="star__img" src="../images/Star.png" alt="">
                                     <img class="star__img" src="../images/Star.png" alt="">
                                     <img class="star__img" src="../images/Star.png" alt="">
@@ -383,6 +390,7 @@
                                     <h2 class="man__name">Артур Исламов</h2>
                                 </div>
                                 <div class="stars">
+                                    <!-- <span class="comments__number">1</span> -->
                                     <img class="star__img" src="../images/Star.png" alt="">
                                     <img class="star__img" src="../images/Star.png" alt="">
                                     <img class="star__img" src="../images/Star.png" alt="">
