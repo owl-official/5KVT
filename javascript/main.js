@@ -72,10 +72,41 @@ $(document).ready(function () {
     $(".slider__inner").slick({
         infinite: true,
         slidesToShow: 3,
-        adaptiveHeight: true,
         slidesToScroll: 1,
         arrows: true,
         prevArrow: $(".slide-prev"),
         nextArrow: $(".slide-next"),
+
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+
+            {
+                breakpoint: 871,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+
+            {
+                breakpoint: 601,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+        ],
     });
 });

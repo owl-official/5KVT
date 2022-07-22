@@ -3,7 +3,7 @@
         position: relative;
         cursor: pointer;
         display: block;
-        height: 500px !important;
+        height: 100% !important;
         padding-top: 5px;
         background-repeat: no-repeat;
         border-radius: 3px;
@@ -199,7 +199,7 @@
 .slide {
     &-next {
         position: absolute;
-        top: 20%;
+        top: 25%;
         right: 0;
         width: 43px;
         height: 43px;
@@ -207,7 +207,7 @@
 
     &-prev {
         position: absolute;
-        top: 22%;
+        top: 25%;
         left: -36px;
         width: 43px;
         height: 43px;

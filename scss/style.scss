@@ -1563,11 +1563,18 @@
         &__desc {
             font-size: 18px;
             line-height: 22px;
+            margin-bottom: 50px;
             color: #383838;
         }
 
         &__location {
             position: relative;
+        }
+    }
+
+    .google {
+        &__map {
+            width: 100%;
         }
     }
 }
@@ -1609,6 +1616,7 @@
         color: #383838;
         margin-right: 20px;
         margin-top: -20px;
+        white-space: nowrap;
     }
 }
 
