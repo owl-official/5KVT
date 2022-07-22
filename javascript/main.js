@@ -15,6 +15,8 @@ $(document).ready(function () {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
+        prevArrow: $(".arrow-perv"),
+        nextArrow: $(".arrow-next"),
         responsive: [
             {
                 breakpoint: 930,
@@ -55,7 +57,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".reviews__slider").slick({ 
+    $(".reviews__slider").slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -63,5 +65,17 @@ $(document).ready(function () {
         arrows: true,
         prevArrow: $(".slide_arrow_prev"),
         nextArrow: $(".slide_arrow_next"),
+    });
+});
+
+$(document).ready(function () {
+    $(".slider__inner").slick({
+        infinite: true,
+        slidesToShow: 3,
+        adaptiveHeight: true,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: $(".slide-prev"),
+        nextArrow: $(".slide-next"),
     });
 });

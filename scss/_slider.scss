@@ -195,3 +195,54 @@
     width: 30px;
     height: 30px;
 }
+
+.slide {
+    &-next {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        width: 43px;
+        height: 43px;
+    }
+
+    &-prev {
+        position: absolute;
+        top: 22%;
+        left: -36px;
+        width: 43px;
+        height: 43px;
+        background: $primary;
+
+        &::before {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.arrow-next {
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    right: 0;
+}
+
+.arrow-perv {
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    margin-left: 20px;
+    right: 68px;
+
+    &::before {
+        transform: rotate(0deg);
+    }
+}
+
+// Centering slides
+// .slick-slide {
+//     margin: 0 26px;
+// }
+
+// .slick-list {
+//     margin: 0 -26px;
+// }

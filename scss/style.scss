@@ -256,6 +256,7 @@
 }
 
 .carousel {
+    position: relative;
     padding-top: 100px;
     padding-bottom: 100px;
 
@@ -1532,4 +1533,135 @@
 .product__sale-red {
     background: #e92626;
     margin-top: 30px;
+}
+
+.contacts {
+    &__title {
+        padding-top: 30px;
+        padding-bottom: 67px;
+        font-size: 36px;
+        font-weight: 500;
+        color: #383838;
+    }
+
+    &__time {
+        font-size: 18px;
+        line-height: 22px;
+        color: #383838;
+        margin-bottom: 30px;
+    }
+
+    .map {
+        margin-bottom: 50px;
+    }
+
+    .slider {
+        &__item {
+            margin-right: 30px;
+        }
+
+        &__desc {
+            font-size: 18px;
+            line-height: 22px;
+            color: #383838;
+        }
+
+        &__location {
+            position: relative;
+        }
+    }
+}
+
+.location {
+    &__img {
+        margin-bottom: 20px;
+    }
+}
+
+.contacts {
+    &__inner {
+        display: flex;
+    }
+
+    &__header {
+        font-size: 24px;
+        line-height: 29px;
+        color: #9c9c9c;
+        margin-bottom: 34px;
+        font-weight: 600;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        margin-bottom: 54px;
+    }
+
+    &__img {
+        &:first-child {
+            margin-left: -20px;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        line-height: 22px;
+        color: #383838;
+        margin-right: 20px;
+        margin-top: -20px;
+    }
+}
+
+.social {
+    &__networks {
+        margin-bottom: 178px;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 29px;
+        color: #9c9c9c;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+
+    &__image {
+        padding-right: 15px;
+    }
+
+    &__inner {
+        display: flex;
+    }
+}
+
+.requisites {
+    width: 652px;
+    height: 100%;
+    background: #f7f7f7;
+    border-radius: 3px;
+    padding: 30px 58px 30px 30px;
+    margin-left: 84px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 29px;
+        color: #9c9c9c;
+        margin-bottom: 30px;
+    }
+
+    &__info {
+        display: block;
+        font-size: 18px;
+        line-height: 22px;
+        color: #383838;
+        margin-bottom: 30px;
+    }
+
+    &__wrap {
+    }
 }
