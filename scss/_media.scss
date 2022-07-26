@@ -161,6 +161,23 @@
 }
 // Laptop M
 @media (max-width: 1024px) {
+    .modal {
+        &__wrap {
+            flex-wrap: wrap;
+            background: #f7f7f7;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            padding: 16px 16px 16px 16px;
+        }
+
+        &__graph {
+            text-align: start !important;
+        }
+
+        &__description {
+            width: auto !important;
+        }
+    }
     .description {
         &__inner {
             flex-wrap: wrap;
@@ -393,6 +410,21 @@
             margin-left: 0px !important;
         }
     }
+
+    .modal {
+        &__form {
+            display: none !important;
+        }
+
+        &-content {
+            padding: 16px 16px 16px 16px !important;
+        }
+    }
+
+    .close {
+        right: 10px !important;
+        top: 30px !important;
+    }
 }
 
 @media (max-width: 750px) {
@@ -581,9 +613,22 @@
 
 // Mobile L
 @media (max-width: 600px) {
+    .map {
+        &__button { 
+            width: auto !important;
+            min-width: 281px !important;
+        }
+    }
+
     .location {
         &__img {
             margin: auto;
+        }
+    }
+
+    .modal {
+        &__title {
+            font-size: 24px !important;
         }
     }
 
