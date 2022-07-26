@@ -2103,8 +2103,23 @@
     }
 
     &__wrap {
+        position: relative;
         display: flex;
         justify-content: space-between;
+
+        &::before {
+            position: absolute;
+            display: block;
+            content: "";
+            height: 1px;
+            width: 100%; 
+            border-bottom: 1px solid #c9c9c9; 
+            top: -9px;
+        } 
+
+        &:first-child { 
+            border: none;
+        }
     }
 
     &__graph {

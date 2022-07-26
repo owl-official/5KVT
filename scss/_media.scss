@@ -425,6 +425,14 @@
         right: 10px !important;
         top: 30px !important;
     }
+
+    .modal {
+        &__wrap {
+            &::before {
+                width: 98% !important;
+            }
+        }
+    }
 }
 
 @media (max-width: 750px) {
@@ -614,9 +622,17 @@
 // Mobile L
 @media (max-width: 600px) {
     .map {
-        &__button { 
+        &__button {
             width: auto !important;
             min-width: 281px !important;
+        }
+    }
+
+    .modal {
+        &__wrap {
+            &::before {
+                width: 96% !important;
+            }
         }
     }
 
