@@ -1,4 +1,5 @@
-$(document).ready(function () {
+
+ $(document).ready(function () {
     $(".slider__content").slick({
         arrows: true,
         slidesToShow: 1,
@@ -110,3 +111,13 @@ $(document).ready(function () {
         ],
     });
 });
+
+
+function openNav() {
+  document.getElementById("myNav").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.display = "none";
+}
+

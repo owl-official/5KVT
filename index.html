@@ -196,8 +196,39 @@
                 <nav class="navigation__block">
                     <ul class="navigation__list">
                         <button class="navigation__menu" type="submit">
-                            <img class="menu__icon" src="images/menu.svg" alt="">
+                            <span onclick="openNav()"><img class="menu__icon" src="images/menu.svg" alt=""></span>
                             <a href="#" class="menu__title">Каталог</a>
+                            <div class="menu__content">
+                                <nav class="menu__nav">
+                                    <ul class="menu__list">
+                                        <div id="myNav" class="overlay">
+                                            <span onclick="closeNav()"><img class="menu_icon" src="images/menu.svg"
+                                                    alt=""></span>
+                                            <div class="overlay-content">
+                                                <li class="menu__item"><a href="#" class="menu__links">Аккумуляторы</a>
+                                                </li>
+                                                <li class="menu__item"><a href="#" class="menu__links">Блоки
+                                                        контроля</a></li>
+                                                <li class="menu__item"><a href="#" class="menu__links">Генераторы</a>
+                                                </li>
+                                                <li class="menu__item"><a href="#" class="menu__links">Климатическая
+                                                        техника</a>
+                                                </li>
+                                                <li class="menu__item"><a href="#" class="menu__links">Отопление</a>
+                                                </li>
+                                                <li class="menu__item"><a href="#" class="menu__links">Перфораторы</a>
+                                                </li>
+                                                <li class="menu__item"><a href="#" class="menu__links">Провода</a></li>
+                                                <li class="menu__item"><a href="#" class="menu__links">Люстры</a></li>
+                                                <li class="menu__item"><a href="#" class="menu__links">Аккумуляторы</a>
+                                                </li>
+                                                <li class="menu__item"><a href="#" class="menu__links">Аккумуляторы</a>
+                                                </li>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </nav>
+                            </div>
                         </button>
                         <li class="navigation__item"><a href="catalog.html" class="navigation__link">Аккумуляторы</a>
                         </li>

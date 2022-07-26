@@ -251,8 +251,39 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 18px;
+        z-index: 50;
         color: #ffffff;
     }
+
+    &_icon {
+        left: 12px;
+        position: absolute;
+        top: 18px;
+    }
+
+    &__links {
+        position: relative; 
+
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            background-image: url(../images/arrow-left-2.png);
+            background-repeat: no-repeat;
+            width: 19px;
+            height: 19px;
+            right: 25px;
+        }
+    }
+
+    // &__item { 
+    //     position: relative;
+    //     &:hover { 
+    //         background: #ffffff;
+    //         opacity: 0.1;
+    //         color: white;
+    //     }
+    // }
 }
 
 .carousel {
@@ -1969,4 +2000,42 @@
             height: 2px;
         }
     }
+}
+
+// Catalog menu
+.overlay {
+    width: 256px;
+    height: 555px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background: #1074eb;
+    border-radius: 3px 3px 0px 0px;
+    transition: 0.5s;
+    display: none;
+}
+
+.overlay-content {
+    position: relative;
+    top: 2%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.overlay a {
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 16px 18px;
+    color: #fff;
+    text-align: left;
+    border-bottom: 1px solid rgb(255 255 255 / 30%);
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 60px;
 }
