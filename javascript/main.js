@@ -2,6 +2,7 @@ $(document).ready(function () {
     $(".slider__content").slick({
         arrows: true,
         slidesToShow: 1,
+        slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
         prevArrow: $(".slide-arrow-prev"),
@@ -109,8 +110,10 @@ $(document).ready(function () {
             },
         ],
     });
-});
+}); 
 
+
+// Catalog Menu
 function openNav() {
     document.getElementById("myNav").style.display = "block";
 }

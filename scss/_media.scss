@@ -848,6 +848,17 @@
 
 // Mobile S
 @media (max-width: 430px) {
+    .arrow-perv {
+        left: -15px !important;
+    }
+
+    .carousel {
+        &__title {
+            text-align: center;
+            font-size: 30px !important;
+        }
+    }
+
     .footer {
         padding: 0 8px;
         &__box {
