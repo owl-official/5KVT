@@ -196,6 +196,7 @@
 .social__icon {
     margin-right: 10px;
     margin-top: 5px;
+    display: inline;
 }
 
 .navigation {
@@ -703,7 +704,8 @@
     }
 
     &__image {
-        margin-right: 10px;
+        margin-right: 10px; 
+        display: inline;
     }
 
     &__copyright {
@@ -2112,12 +2114,12 @@
             display: block;
             content: "";
             height: 1px;
-            width: 100%; 
-            border-bottom: 1px solid #c9c9c9; 
+            width: 100%;
+            border-bottom: 1px solid #c9c9c9;
             top: -9px;
-        } 
+        }
 
-        &:first-child { 
+        &:first-child {
             border: none;
         }
     }

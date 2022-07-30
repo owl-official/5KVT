@@ -39,6 +39,10 @@
         border-radius: 3px;
         border: none;
         color: white;
+    } 
+
+    &__img { 
+        display: none !important;
     }
 }
 
@@ -201,7 +205,7 @@
     &-next {
         position: absolute;
         top: 25%;
-        right: 0;
+        right: -20px;
         width: 43px;
         height: 43px;
     }
