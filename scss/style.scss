@@ -15,8 +15,14 @@
     }
 
     &__charts {
-        display: inline; 
-       fill: black;
+        display: inline;
+        fill: black;
+
+        &:hover {
+            svg path {
+                fill: $primary;
+            }
+        }
     }
 
     &__logo--top {
@@ -74,12 +80,6 @@
 
     &__icon {
         margin-left: 25px;
-
-        &:hover {
-            svg path {
-                fill: $primary;
-            }
-        }
 
         &:last-child {
             display: none;
@@ -262,7 +262,7 @@
     }
 
     &_icon {
-        left: 12px;
+        left: 15px;
         position: absolute;
         top: 18px;
     }
