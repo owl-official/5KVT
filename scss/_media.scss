@@ -161,6 +161,14 @@
 }
 // Laptop M
 @media (max-width: 1024px) {
+    .arrow-next {
+        right: 7px !important;
+    }
+
+    .arrow-perv {
+        right: 60px !important;
+    }
+
     .modal {
         &__wrap {
             flex-wrap: wrap;

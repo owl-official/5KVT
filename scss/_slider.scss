@@ -1,4 +1,6 @@
 .slider {
+    overflow: hidden; 
+    
     &__item {
         position: relative;
         cursor: pointer;
@@ -39,9 +41,9 @@
         border-radius: 3px;
         border: none;
         color: white;
-    } 
+    }
 
-    &__img { 
+    &__img {
         display: none !important;
     }
 }
