@@ -207,20 +207,9 @@
 .navigation {
     padding-bottom: 9px;
 
-    &__box {
+    &__box,
+    &__block {
         display: flex;
-    }
-
-    &__menu {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        background: #1074eb;
-        border-radius: 3px;
-        border: none;
-        height: 60px;
-        width: 136px;
-        justify-content: space-around;
     }
 
     &__item {
@@ -240,11 +229,6 @@
         color: $primary;
     }
 
-    &__block {
-        background: #f7f7f7;
-        width: 100%;
-    }
-
     &__list {
         display: flex;
         align-items: center;
@@ -253,6 +237,24 @@
 }
 
 .menu {
+    &__button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        background: #1074eb;
+        border-radius: 3px;
+        border: none;
+        height: 60px;
+        width: 136px;
+        justify-content: space-around;
+
+        &:hover ~ .menu__content {
+            width: 256px;
+            height: 555px;
+            opacity: 1;
+        }
+    }
+
     &__title {
         font-weight: 400;
         font-size: 16px;
@@ -261,13 +263,18 @@
         color: #ffffff;
     }
 
-    &_icon {
+    &__icon {
         left: 15px;
-        position: absolute;
         top: 18px;
     }
 
     &__links {
+        font-size: 16px;
+        color: #ffffff;
+        padding: 16px 18px;
+        color: #fff;
+        text-align: left;
+        border-bottom: 1px solid rgb(255 255 255 / 30%);
         position: relative;
 
         &::before {
@@ -282,14 +289,25 @@
         }
     }
 
-    // &__item {
-    //     position: relative;
-    //     &:hover {
-    //         background: #ffffff;
-    //         opacity: 0.1;
-    //         color: white;
-    //     }
-    // }
+    &__content {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        background: #1074eb;
+        border-radius: 3px 3px 0px 0px;
+        transition: 0.5s;
+        transition: all 0.3s linear;
+
+        &:hover {
+            width: 256px;
+            height: 555px;
+            opacity: 1;
+        }
+    }
 }
 
 .carousel {
@@ -315,7 +333,7 @@
     }
 
     &__product {
-        margin: 0 15px; 
+        margin: 0 15px;
         transition: all 0.3s;
 
         &:hover {
@@ -2040,44 +2058,6 @@
             height: 2px;
         }
     }
-}
-
-// Catalog menu
-.overlay {
-    width: 256px;
-    height: 555px;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    background: #1074eb;
-    border-radius: 3px 3px 0px 0px;
-    transition: 0.5s;
-    display: none;
-}
-
-.overlay-content {
-    position: relative;
-    top: 2%;
-    width: 100%;
-    margin-top: 30px;
-}
-
-.overlay a {
-    display: block;
-    font-size: 16px;
-    color: #ffffff;
-    padding: 16px 18px;
-    color: #fff;
-    text-align: left;
-    border-bottom: 1px solid rgb(255 255 255 / 30%);
-}
-
-.overlay .closebtn {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    font-size: 60px;
 }
 
 .modal {

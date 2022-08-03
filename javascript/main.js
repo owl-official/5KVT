@@ -112,17 +112,6 @@ $(document).ready(function () {
     });
 });
 
-// Catalog Menu
-function myFunction() {
-    var x = document.getElementById("myNav");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
-
-//  Modal window
 var modal = document.getElementById("myModal");
 
 var btn = document.getElementById("map__button");
