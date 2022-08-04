@@ -112,6 +112,7 @@ $(document).ready(function () {
     });
 });
 
+// Modal
 var modal = document.getElementById("myModal");
 
 var btn = document.getElementById("map__button");
@@ -131,3 +132,22 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 };
+
+// Overlay
+
+var overlay = document.getElementById("overlay");
+
+var menu = document.getElementsByClassName("menu__content")[0];
+
+// menu.onmouseover = (event) => {
+//     console.log(menu.style.display == "flex");
+//     console.log(menu);
+
+//     menu.style.display = "flex";
+
+//     if (menu.style.display == "flex") {
+//         overlay.style.display = "block";
+//     }
+// };
+
+
