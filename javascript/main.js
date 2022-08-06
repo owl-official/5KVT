@@ -112,26 +112,26 @@ $(document).ready(function () {
     });
 });
 
-// Modal
-var modal = document.getElementById("myModal");
+// // Modal
+// var modal = document.getElementById("myModal");
 
-var btn = document.getElementById("map__button");
+// var btn = document.getElementById("map__button");
 
-var span = document.getElementsByClassName("close")[0];
+// var span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function () {
-    modal.style.display = "block";
-};
+// btn.onclick = function () {
+//     modal.style.display = "block";
+// };
 
-span.onclick = function () {
-    modal.style.display = "none";
-};
+// span.onclick = function () {
+//     modal.style.display = "none";
+// };
 
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
+// window.onclick = function (event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// };
 
 // Overlay
 
@@ -139,15 +139,13 @@ var overlay = document.getElementById("overlay");
 
 var menu = document.getElementsByClassName("menu__content")[0];
 
-// menu.onmouseover = (event) => {
-//     console.log(menu.style.display == "flex");
-//     console.log(menu);
+menu.onmouseover = (event) => {
+    overlay.style.visibility = "visible";
+};
 
-//     menu.style.display = "flex";
-
-//     if (menu.style.display == "flex") {
-//         overlay.style.display = "block";
-//     }
-// };
+menu.onmouseout = (event) => {
+    overlay.style.visibility = "hidden";
+    overlay.style.opacity = 1;
+};
 
 

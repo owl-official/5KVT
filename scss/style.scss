@@ -238,7 +238,6 @@
 
 .menu {
     &__button {
-        cursor: pointer;
         display: flex;
         align-items: center;
         background: #1074eb;
@@ -249,7 +248,7 @@
         justify-content: space-around;
 
         &:hover ~ .menu__content {
-            display: flex;
+            visibility: visible;
         }
     }
 
@@ -259,71 +258,46 @@
         line-height: 18px;
         z-index: 50;
         color: #ffffff;
+        pointer-events: none;
     }
 
     &__icon {
         left: 15px;
         top: 18px;
         z-index: 100;
+        pointer-events: none;
     }
 
     &__links {
+        position: relative;
         font-size: 16px;
         color: #ffffff;
         padding: 16px 18px;
         color: #fff;
         text-align: left;
+        width: 100%;
 
         &::before {
             position: absolute;
             content: "";
-            display: block;
+            display: inline;
             background-image: url(../images/arrow-left-2.png);
             background-repeat: no-repeat;
             width: 19px;
             height: 19px;
             left: 220px;
         }
-    }
-
-    &__content {
-        display: flex;
-        justify-content: space-between;
-        display: none;
-        position: absolute;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        border-radius: 3px 3px 0px 0px;
-        transition: 0.5s;
-        padding-top: 60px;
-        background: #1074eb;
-        width: 256px;
-
-        &:hover {
-            display: flex;
-        }
-    }
-
-    &__list {
-        height: 100%;
-    }
-
-    &__item {
-        display: flex;
-        width: 100%;
-        height: 50px;
-
-        &:hover {
-            background-color: $gray;
-        }
-
-        &:hover .categories {
-            display: block;
-        }
 
         &::after {
-            position: relative;
+            position: absolute;
+            content: "";
+            width: 226px;
+            height: 1px;
+            left: 10px;
+            top: 0;
+            background: #ffffff;
+            opacity: 0.3;
+            transition: 0.2s;
         }
 
         &:last-child {
@@ -333,25 +307,107 @@
             }
         }
     }
+
+    &__list {
+        width: 256px;
+        padding-right: 15px !important;
+        z-index: 1000;
+
+        &:hover {
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+            .menu__links::after {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        left: 0;
+        top: 0;
+        border-radius: 3px 0px 0px 0px;
+        transition: 0.3s;
+        padding-top: 60px;
+        background: #1074eb;
+        width: 256px;
+
+        &:hover {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__item {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+
+            .categories {
+                visibility: visible;
+                transition: 0s;
+                opacity: 1;
+            }
+
+            .menu__links::after {
+                visibility: hidden;
+            }
+        }
+    }
 }
 
 .categories {
     position: relative;
-    display: none;
-    width: 867px;
+    display: flex;
+    visibility: hidden;
+    width: 493px;
     flex-direction: column;
     flex-wrap: wrap;
     background-color: $primary;
     position: absolute;
-    left: 209px;
+    left: 256px;
     top: 0;
     height: 100%;
-    padding: 20px;
-    transition: all 0.3s; 
-    overflow: hidden;
+    padding: 60px 50px 0 15px;
+    margin-right: 10px;
+    opacity: 0;
+    border-right: 10px solid #1074eb;
+    border-radius: 0px 3px 0px 0px;
+    transition: 0.3s;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-clip: padding-box;
+        margin: 10px 0;
+        border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #383838;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
 
     .menu__content &:hover {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
     }
 
     &__item {
@@ -389,7 +445,6 @@
 .carousel {
     position: relative;
     overflow: hidden;
-    padding-top: 100px;
     padding-bottom: 100px;
 
     &__box {
@@ -553,6 +608,8 @@
     background-position: center;
     height: 300px;
     overflow: hidden;
+    padding-bottom: 100px;
+
     &__wrap {
         position: relative;
         &::after {
@@ -620,6 +677,10 @@
         align-items: center;
         padding: 50px 0 0 0;
     }
+}
+
+.deals {
+    padding-top: 100px;
 }
 
 .advantage {
@@ -1441,6 +1502,7 @@
         align-items: center;
     }
 }
+
 .cart {
     &__button {
         cursor: pointer;
@@ -2262,8 +2324,10 @@
 }
 
 #overlay {
-    display: none;
-    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.1s;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
@@ -2284,13 +2348,8 @@
     &__inner {
         display: flex;
         justify-content: space-between;
-        width: 500px;
+        width: 100%;
     }
-}
-
-.faq {
-    margin-top: 35px;
-    margin-left: 50px;
 }
 
 .faq-title {
@@ -2309,12 +2368,6 @@
 
 .faq-input:checked ~ .faq-text {
     display: block;
-}
-
-.faq {
-    &__item {
-        margin-top: 15px;
-    }
 }
 
 .faq-text {
