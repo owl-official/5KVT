@@ -439,8 +439,29 @@
                 дату.
             </p>
         </div>
-    </footer>
+    </footer> 
+    
+    <script>
+        var modal = document.getElementById("myModal");
 
+        var btn = document.getElementById("map__button");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        };
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
 
     <script src="javascript/main.min.js"></script>
     <script src="javascript/jquery-3.6.0.min.js"></script>

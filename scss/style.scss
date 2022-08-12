@@ -684,6 +684,7 @@
 }
 
 .advantage {
+    padding-top: 100px;
     padding-bottom: 100px;
 
     &__header {
@@ -692,6 +693,10 @@
         line-height: 43px;
         padding-bottom: 70px;
         color: #383838;
+
+        &-mobile {
+            display: none;
+        }
     }
 
     &__item {
@@ -975,7 +980,7 @@
             font-size: 16px;
             line-height: 19px;
             color: #1074eb;
-            white-space: nowrap; 
+            white-space: nowrap;
             border: none;
         }
 
@@ -1946,10 +1951,10 @@
             border-radius: 1px;
             margin-top: 10px;
             height: 1px;
+        }
 
-            &:last-child {
-                border-bottom: 0px !important;
-            }
+        *::after {
+            content: none;
         }
     }
 
@@ -2375,3 +2380,4 @@
     display: none;
     color: #fff;
 }
+
