@@ -580,6 +580,12 @@
             position: relative;
             margin-left: 20px;
         }
+
+        &__icon {
+            &:nth-child(4) {
+                display: block !important;
+            }
+        }
     }
 
     .burger__menu {
@@ -649,6 +655,25 @@
                 text-align: center;
                 margin-bottom: 36px;
                 font-weight: 400;
+            }
+        }
+    }
+
+    .header .header {
+        &__top {
+            position: relative;
+            background: white;
+
+            &::before {
+                position: absolute;
+                display: block;
+                content: "";
+                width: 95%;
+                height: 1px;
+                background: #c9c9c9;
+                border-radius: 1px;
+                top: 57px;
+                left: 11px;
             }
         }
     }
@@ -767,6 +792,9 @@
 
     .product {
         &__button {
+            width: 113px !important;
+            height: 51px !important;
+
             &::after {
                 display: none !important;
             }
@@ -783,6 +811,17 @@
             border-radius: 3px;
             border: none;
         }
+
+        &__inner {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: flex-end !important;
+            width: 173px;
+        }
+
+        &__icon {
+            display: none !important;
+        }
     }
 
     .button {
@@ -790,6 +829,18 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
+        }
+
+        &__charts {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 51px;
+            height: 51px;
+            background: #1074eb;
+            border-radius: 3px;
+            border: none;
+            visibility: visible !important;
         }
     }
 
@@ -863,14 +914,6 @@
 }
 
 @media (max-width: 500px) {
-    .product {
-        &__icon {
-            &:last-child {
-                display: none !important;
-            }
-        }
-    }
-
     .delivery {
         &__description {
             margin-top: 21px !important;
