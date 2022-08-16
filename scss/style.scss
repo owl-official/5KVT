@@ -439,6 +439,10 @@
     color: white;
     margin-right: 12px;
     margin-top: 15px;
+
+    &__two {
+        display: none;
+    }
 }
 
 .carousel {
@@ -1297,9 +1301,8 @@
         margin-bottom: 50px;
     }
 
-    &__img {
-        width: 555px;
-        height: 555px;
+    &__img-two {
+        display: none;
     }
 
     &__block {
@@ -1707,6 +1710,12 @@
     &__available {
         color: $red;
         font-size: 16px;
+
+        &-two {
+            color: $red;
+            font-size: 16px;
+            display: none;
+        }
     }
 }
 
@@ -2383,5 +2392,16 @@
 .button {
     &__charts {
         visibility: hidden;
+    }
+}
+
+.favorites,
+.share {
+    visibility: hidden;
+}
+
+.share {
+    &__img {
+        margin-top: 30px;
     }
 }
