@@ -168,6 +168,12 @@
             display: none !important;
         }
     }
+
+    .slider {
+        &__box {
+            margin-left: 82px;
+        }
+    }
 }
 // Laptop M
 @media (max-width: 1024px) {
@@ -299,6 +305,16 @@
 
         &__block {
             margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .slider {
+        &__box {
+            margin-left: 0px !important;
+            margin-top: 20px !important; 
+            top: 0;
         }
     }
 }
@@ -490,6 +506,31 @@
             }
         }
     }
+}
+
+@media (max-width: 768px) {
+    .header .header {
+        &__top {
+            position: relative;
+            background: white;
+
+            &::before {
+                position: absolute;
+                display: block;
+                content: "";
+                width: 97%;
+                height: 1px;
+                background: #c9c9c9;
+                border-radius: 1px;
+                top: 57px;
+                left: 11px;
+            }
+        }
+    }
+
+    // .slider__img-rs {
+    //      display: block !important;
+    // }
 }
 
 @media (max-width: 750px) {
@@ -731,6 +772,17 @@
 
 // Mobile L
 @media (max-width: 600px) {
+    .slider {
+        &__img {
+            display: none !important;
+
+            &-rs {
+                display: block !important;
+                width: 100%;
+            }
+        }
+    }
+
     .advantage {
         &__header {
             display: none;
@@ -747,25 +799,6 @@
 
     .cart .cart__features {
         margin-top: 312px;
-    }
-
-    .header .header {
-        &__top {
-            position: relative;
-            background: white;
-
-            &::before {
-                position: absolute;
-                display: block;
-                content: "";
-                width: 95%;
-                height: 1px;
-                background: #c9c9c9;
-                border-radius: 1px;
-                top: 57px;
-                left: 11px;
-            }
-        }
     }
 
     .map {
