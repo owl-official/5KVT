@@ -2546,3 +2546,114 @@
         margin-top: 30px;
     }
 }
+
+.cart {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__header {
+        margin-bottom: 50px;
+        font-size: 36px;
+        font-weight: 400;
+        color: #383838;
+    }
+
+    &__content {
+        max-width: 1140px;
+        height: 500px;
+        padding: 20px;
+        background: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: scroll;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center; 
+        font-size: 16px;
+        line-height: 19px;
+        color: #9c9c9c;
+    }
+
+    &__top-links {
+        border-top: 1px solid #c9c9c9;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__link {
+        padding-right: 113px;
+        padding-top: 20px;
+    }
+
+    &__bottom-content {
+        padding-top: 20px;
+        padding-right: 184px;
+        border-bottom: 1px solid #c9c9c9;
+        padding-bottom: 20px;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__title-two {
+        font-size: 22px;
+        color: #383838;
+    }
+
+    &__price {
+        font-size: 24px;
+        color: #383838;
+    }
+
+    &__btn {
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        border: none;
+        background: #383838;
+        border-radius: 3px;
+        color: white;
+        border-radius: 3px 3px 3px 3px;
+
+        &-numb {
+            cursor: pointer;
+            border: none;
+            width: 61px;
+            height: 35px;
+            background: #d9d9d9;
+        }
+    }
+
+    &__button-wrap {
+        display: flex;
+    }
+
+    &__remove-product {
+        width: 30px;
+        height: 30px;
+        background: #383838;
+        border-radius: 3px;
+    }
+
+    &__button-order {
+        cursor: pointer;
+        border: none;
+        width: 315px;
+        height: 54px;
+        background: #ff9900;
+        color: white;
+        border-radius: 3px;
+    }
+
+    &-button__wrap {
+        display: flex;
+        justify-content: center;
+    }
+}
