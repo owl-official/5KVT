@@ -275,9 +275,15 @@
 }
 
 @media (max-width: 995px) {
-    .cart .cart {
+    .cart-product .cart-product {
         &__button {
-            min-width: 100%;
+            cursor: pointer;
+            border: none;
+            width: 221px;
+            height: 51px;
+            background: #1074eb;
+            color: white;
+            border-radius: 3px;
         }
 
         &__title-gray {
@@ -288,6 +294,11 @@
             font-size: 30px;
         }
     }
+
+    .cart-product__button::after {
+        display: none !important;
+    }
+
     .item {
         &__price {
             font-size: 24px !important;
@@ -301,10 +312,6 @@
     .content {
         &__bottom {
             display: block !important;
-        }
-
-        &__block {
-            margin-top: 20px;
         }
     }
 }
@@ -367,7 +374,40 @@
     }
 }
 @media (max-width: 890px) {
-    .cart .cart {
+    .content__bottom {
+        display: flex !important;
+    }
+
+    .cart-product__button {
+        width: 100% !important;
+    }
+
+    .share__img {
+        right: 27px;
+        position: relative;
+    }
+
+    .button {
+        &__wrap {
+            display: flex;
+        }
+    }
+
+    .favorites,
+    .share {
+        visibility: visible !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 51px;
+        height: 51px;
+        border: none;
+        background: #1074eb;
+        border-radius: 3px;
+        margin-left: 18px;
+    }
+
+    .cart-product .cart-product {
         &__inner {
             flex-wrap: wrap-reverse;
         }
@@ -375,6 +415,7 @@
         &__block {
             width: 100%;
             margin-left: 0px;
+            padding: 0;
         }
     }
 
@@ -384,12 +425,15 @@
         }
     }
 
-    .cart .cart {
+    .cart-product .cart-product {
         &__img {
             display: none;
 
             &-two {
                 display: block !important;
+                object-fit: contain;
+                width: 359px;
+                height: 359px;
             }
         }
 
@@ -742,14 +786,6 @@
         }
     }
 
-    .favorites {
-        visibility: visible !important;
-    }
-
-    .share {
-        visibility: visible !important;
-    }
-
     .content {
         &__bottom {
             display: flex !important;
@@ -907,7 +943,7 @@
         height: 530px !important;
 
         &__inner {
-            padding: 224px 0 0 0px !important;
+            padding: 290px 0 0 0px !important;
         }
 
         &__button {
