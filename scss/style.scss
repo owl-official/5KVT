@@ -132,7 +132,7 @@
         border: none;
     }
 
-    &__cart { 
+    &__cart {
         display: none;
         position: relative;
         width: 300px;
@@ -689,11 +689,15 @@
         color: #9c9c9c;
         padding-top: 20px;
         padding-bottom: 7px;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     &__description {
         display: block;
-        margin-bottom: 32px;
+        height: 32px;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     &__price {
@@ -2628,10 +2632,6 @@
         margin-left: 75px;
     }
 
-    &__link {
-        padding-right: 113px;
-        padding-top: 20px;
-    }
 
     &__bottom {
         display: flex;

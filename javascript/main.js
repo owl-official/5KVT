@@ -3,8 +3,9 @@ $(document).ready(function () {
         arrows: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
+        autoplay: true,
+        autoplaySpeed: 3000, 
+        autoheight: true,
         prevArrow: $(".slide-arrow-prev"),
         nextArrow: $(".slide-arrow-next"),
     });

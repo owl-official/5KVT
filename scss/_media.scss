@@ -332,6 +332,14 @@
     }
 }
 
+@media (max-width: 929px) {
+    .product {
+        &__img {
+            width: 100% !important;
+        }
+    }
+}
+
 // Laptop
 @media (max-width: 922px) {
     .header {
@@ -586,9 +594,12 @@
         }
     }
 
-    // .slider__img-rs {
-    //      display: block !important;
-    // }
+    .product {
+        &__price,
+        &__old__price {
+            font-size: 20px !important;
+        }
+    }
 }
 
 @media (max-width: 750px) {
@@ -1021,6 +1032,13 @@
         }
     }
 
+    .carousel {
+        &__product {
+            margin: 0 10px !important;
+            width: 176px !important;
+        }
+    }
+
     .button {
         &__block {
             display: flex;
@@ -1227,6 +1245,12 @@
         }
     }
 
+    .carousel {
+        &__product {
+            margin: 0 10px !important;
+        }
+    }
+
     .wrapper {
         padding: 0 8px;
     }
@@ -1258,6 +1282,13 @@
         &__title,
         &__return {
             font-size: 14px;
+        }
+    }
+
+    .carousel {
+        &__product {
+            margin: 0px 7px !important;
+            width: 172px !important;
         }
     }
 
