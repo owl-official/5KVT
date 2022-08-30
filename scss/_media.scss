@@ -108,6 +108,14 @@
         margin-left: -20px;
     }
 
+    .cart {
+        &__top-info {
+            &::after {
+                width: 100% !important;
+            }
+        }
+    }
+
     .advantage {
         &__box {
             grid-template-columns: repeat(3, 1fr) !important;
@@ -259,6 +267,18 @@
         width: 100% !important;
         margin-left: 0px !important;
         margin-bottom: 20px !important;
+    }
+}
+
+@media (max-width: 1010px) {
+    .header {
+        &__cart {
+            display: none !important;
+        }
+
+        &__top {
+            overflow: hidden !important;
+        }
     }
 }
 
@@ -513,6 +533,14 @@
     .cart .cart {
         &__list {
             display: none;
+        }
+
+        &__top-info {
+            display: none !important;
+        }
+
+        &__content {
+            padding: 10px !important;
         }
     }
 }
@@ -810,13 +838,6 @@
         }
     }
 
-    .cart .cart {
-        &__button {
-            min-width: 221px !important;
-            height: 51px;
-        }
-    }
-
     .favorites,
     .share {
         display: flex;
@@ -857,6 +878,11 @@
 
 // Mobile L
 @media (max-width: 600px) {
+    .cart {
+        &__bottom {
+            background: #f7f7f7 !important;
+        }
+    }
     .slider {
         &__img {
             display: none !important;
@@ -864,6 +890,7 @@
             &-rs {
                 display: block !important;
                 width: 100%;
+                height: 100%;
             }
         }
     }
@@ -1086,7 +1113,8 @@
         }
 
         &__title {
-            font-size: 24px;
+            font-size: 24px; 
+            margin-bottom: 5px;
         }
 
         &__title-gray {
@@ -1145,7 +1173,7 @@
     .carousel {
         &__title {
             text-align: center;
-            font-size: 30px !important;
+            font-size: 28px !important;
         }
     }
 
@@ -1302,10 +1330,6 @@
         margin-top: 248px;
     }
 
-    .cart .cart__button {
-        min-width: 169px !important;
-        height: 51px;
-    }
 }
 
 @media (max-width: 340px) {

@@ -16,7 +16,6 @@
 
     &__charts {
         display: inline;
-        fill: black;
 
         &:hover {
             svg path {
@@ -41,7 +40,6 @@
         padding-bottom: 15px;
         background: #f7f7f7;
         width: 100%;
-        overflow: hidden;
     }
 
     &__menu--top {
@@ -84,6 +82,10 @@
         &:nth-child(4) {
             display: none !important;
         }
+    }
+
+    &__user-icon {
+        display: none;
     }
 
     &__images {
@@ -133,13 +135,27 @@
     }
 
     &__cart {
-        display: none;
-        position: relative;
+        position: absolute;
         width: 300px;
         height: 386px;
         padding: 10px 10px 10px 10px;
         background: #1074eb;
         border-radius: 3px;
+        right: 0;
+        top: 0px;
+        opacity: 0;
+        z-index: 1;
+        transition: all 0.3s;
+
+        &:hover {
+            opacity: 1;
+            visibility: visible;
+            margin-top: 30px;
+        }
+
+        &:hover ~ .menu__content {
+            visibility: visible;
+        }
 
         &-inner {
             width: 100%;
@@ -2631,7 +2647,6 @@
         padding-bottom: 20px !important;
         margin-left: 75px;
     }
-
 
     &__bottom {
         display: flex;
