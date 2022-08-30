@@ -1113,7 +1113,7 @@
         }
 
         &__title {
-            font-size: 24px; 
+            font-size: 24px;
             margin-bottom: 5px;
         }
 
@@ -1275,7 +1275,18 @@
 
     .carousel {
         &__product {
-            margin: 0 10px !important;
+            width: 172px !important;
+            margin: 0 9px !important;
+        } 
+
+        &__box { 
+            margin-left: 25px !important; 
+        }
+    }
+
+    .product {
+        &__inner {
+            width: auto !important;
         }
     }
 
@@ -1303,6 +1314,14 @@
     .price {
         margin-top: 0 !important;
     }
+} 
+
+@media (max-width: 370px) {
+    .carousel .carousel { 
+        &__box { 
+            margin-left: 0 !important;
+        }
+    }
 }
 
 @media (max-width: 355px) {
@@ -1329,7 +1348,6 @@
     .cart .cart__features {
         margin-top: 248px;
     }
-
 }
 
 @media (max-width: 340px) {

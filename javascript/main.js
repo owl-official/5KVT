@@ -33,6 +33,13 @@ $(document).ready(function () {
                     slidesToShow: 2,
                 },
             },
+
+            {
+                breakpoint: 320,
+                settings: {
+                    centerMode: true,
+                },
+            },
         ],
     });
 });
