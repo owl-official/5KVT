@@ -370,6 +370,14 @@
         &__motto {
             display: none !important;
         }
+
+        &__menu--top {
+            display: block !important;
+        }
+    }
+
+    .burger__menu {
+        display: block !important;
     }
 
     .footer {
@@ -505,10 +513,10 @@
     }
 }
 
-@media (max-width: 850px)  {
+@media (max-width: 850px) {
     .advantage {
         &__item {
-            min-width: 100%; 
+            min-width: 100%;
         }
     }
 }
@@ -920,7 +928,6 @@
                 font-weight: 400;
             }
         }
-
     }
 
     .cart .cart__features {
